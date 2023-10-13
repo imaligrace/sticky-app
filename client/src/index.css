@@ -1,0 +1,298 @@
+/* Global Styles */
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: black;
+  background-color: #f5f4f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* App Styles */
+.container {
+  max-width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 10px;
+}
+
+.add-card {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+/* SideMenu Styles */
+.logo-side-menu {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  background-color: #f5f4f9;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+}
+
+.logo-side-menu a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.comments-textarea {
+  width: 100%;
+  height: 55%;
+  resize: vertical;
+}
+
+.comment-button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: lightpink;
+}
+
+.about-link a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.about-link:hover {
+  text-decoration: none;
+  color: lightpink;
+}
+
+/* BuyerWall Styles */
+.buyers-wall {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 5px;
+  margin-right: 70px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* background-color: lightgray; */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 1rem;
+  min-height: 170px;
+  position: relative;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 20px;
+}
+
+/* AddBuyerCard Styles */
+.add-icon {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.add-icon:hover {
+  transform: scale(1.01) translateY(-5px);
+}
+
+.add-button {
+  font-size: larger;
+  background-color: black;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.card-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 80%;
+  margin-top: 30px;
+}
+
+.card-entry p {
+  padding: 0%;
+  margin: 0;
+}
+
+.color-options {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selected {
+  border: 3px solid lightgray;
+}
+
+/* ABOUT CSS */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image {
+  max-width: 60%;
+  margin-top: 0;
+  margin-right: 0px;
+}
+
+.about-page h1 {
+  text-align: center;
+}
+
+.about-page a {
+  margin-top: 0;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.about-page a:hover {
+  background-color: lightpink;
+}
+
+/* Global Styles */
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+/* App Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .add-card {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* SideMenu Styles */
+@media screen and (max-width: 768px) {
+  .logo-side-menu {
+    padding: 20px;
+  }
+
+  .comments-textarea {
+    height: 100px;
+  }
+}
+
+/* BuyerWall Styles */
+@media screen and (max-width: 768px) {
+  .buyers-wall {
+    margin-right: 10px;
+  }
+
+  .card {
+    min-height: 150px;
+  }
+}
+
+/* AddBuyerCard Styles */
+@media screen and (max-width: 768px) {
+  .add-button {
+    font-size: medium;
+    margin-bottom: 20px;
+  }
+
+  .card-entry {
+    max-width: 100%;
+  }
+
+  .color-options {
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .color-option {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* ABOUT CSS */
+@media screen and (max-width: 768px) {
+  .about-page {
+    padding: 20px;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-page h1 {
+    font-size: 2rem;
+  }
+
+  .about-page a {
+    font-size: small;
+  }
+}
+
